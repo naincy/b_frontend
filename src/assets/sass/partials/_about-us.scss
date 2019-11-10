@@ -1,0 +1,148 @@
+.about-page {
+    .space {
+        background-color: white;
+        margin-bottom: 30px;
+    }
+    .content-wrapper {
+        background: #2f6d8a no-repeat url(https://s3.ap-south-1.amazonaws.com/benchmark-dam/screenshots/professional-background-1.jpg);
+        background-size: cover;
+    }
+    .contact-us-wrapper {
+        padding: 5px 10px 15px;
+        font-size: 18px;
+        .contact-link {
+            color: #fff;
+            i {
+                color: #fdeee6;
+            }
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+    .grid-wrapper .grid {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        text-align: left;
+        letter-spacing: -.31em;
+        text-rendering: optimizespeed;
+        max-width: 1200px;
+        .grid__cell {
+            margin-bottom: 25px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            display: inline-block;
+            margin: 0;
+            padding: 0 12.5px;
+            vertical-align: top;
+            text-align: center;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-rendering: auto;
+            &.grid__display {
+                display: flex;
+                flex-direction: column;
+            }
+            .hero-banner__title {
+                font-size: 50px;
+                line-height: 1em;
+                letter-spacing: -.08em;
+                font-weight: 900;
+                display: block;
+                padding: 0;
+                margin: 30px 0 30px 0;
+                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+            .hero-banner__subtitle {
+                color: #eee;
+                width: 70%;
+                text-align: center;
+                font-style: italic;
+                margin: 0 auto 20px;
+                background: #000;
+                padding: 10px 20px;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.4em;
+            }
+            .hero-banner--about-us {
+                background-color: #2f6d8a;
+            }
+            .member-section {
+                width: 100%;
+                position: relative;
+                top: -50px;
+                margin: 0;
+                &.anurag {
+                    top: -42px;
+                }
+                &.soumya {
+                    top: -44px;
+                }
+                &.kartik {
+                    top: -43px;
+                }
+                &.anshul {
+                    top: -36px;
+                }
+                img {
+                    display: block;
+                    width: 120px;
+                    height: auto;
+                    border-radius: 70px;
+                    margin: 0 auto;
+                    position: relative;
+                    left: 0;
+                    top: 50px;
+                }
+                .detail-section {
+                    background-color:#2f6d8a;
+                    border-radius: 10px;
+                    color: white;
+                    h5 {
+                        font-weight: 500;
+                        font-size: 20px;
+                        margin: 10px;
+                        padding-top: 45px;
+                    }
+                    hr {
+                        margin: 5px 20px 10px;
+                    }
+                    h6 {
+                        font-size: 12px;
+                    }
+                    p {
+                        padding: 0 10px 10px;
+                        text-align: center;
+                        font-size: 13px;
+                        margin: 0;
+                    }
+                    .social-share {
+                        padding-bottom: 10px;
+                        .btn-simple {
+                            font-size: 20px;
+                            padding: 0 15px;
+                            color: white;
+                            a {
+                                color: white;
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}

@@ -1,0 +1,95 @@
+.dashboard-container {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: calc(100vh - 120px);
+  .stack-wrapper {
+    display: flex;
+    width: 100%;
+    .stack {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .stack-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin: 20px 0;
+        background-color: rgb(20, 70, 90);
+        color: #FFF;
+        border-radius: 20px;
+        padding: 5px 10px;
+        &.expanded {
+          .dot-icon {
+            display: none;
+          }
+          .stack-content {
+            padding: 10px;
+            width: 100%;
+            .stack-description {
+              visibility: visible;
+              height: auto;
+              line-height: 1.5;
+              padding-top: 1em;
+              padding-bottom: 1em;
+              color: #c7c3c3;
+              .row .col-lg-3 {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+            }
+          }
+        }
+        .dot-icon {
+          display: inline-block;
+          width: 30px;
+          padding-right: 10px;
+        }
+        .stack-content {
+          display: inline-block;
+          .stack-header {
+            font-size: 18px;
+            font-weight: 600;
+            .stack-link {
+              font-size: 12px;
+              text-decoration: underline;
+              float: right;
+              padding: 3px;
+            }
+          }
+          .stack-description {
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            transition: all .4s ease-in-out;
+            line-height: 0;
+            padding: 0 1em;
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-dashboard-container {
+ // padding: 15px;
+  width: 100%;
+  .admin-dashboard-header {
+    font-weight: normal;
+    font-size: 26px;
+    text-transform: none;
+    color: rgb(87, 98, 118);
+    margin-top: 10px;
+    margin-bottom: 6px;
+    padding-left: 19px;
+    span{
+      color: rgb(248, 121, 0);
+    }
+  }
+  .admin-dashboard-wrapper {
+    padding: 0 10px;
+  }
+}

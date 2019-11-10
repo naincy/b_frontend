@@ -1,0 +1,29 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+// Core CSS
+@import "partials/typography";
+@import "partials/misc";
+@import "partials/sidebar-and-main-panel";
+@import "partials/buttons";
+@import "partials/inputs";
+@import "partials/carousel";
+@import "partials/dashboard-stack";
+@import "partials/notfound";
+@import "partials/about-us";
+
+@import "partials/alerts";
+@import "partials/tables";
+
+@import "partials/checkbox-radio-switch";
+@import "partials/navbars";
+@import "partials/footers";
+
+// Fancy Stuff
+@import "partials/dropdown";
+@import "partials/cards";
+@import "partials/search";
+@import "partials/chartist";
+@import "partials/history-tags-card";
+@import "partials/filter-card";
+@import "partials/responsive";

@@ -1,0 +1,164 @@
+.userpanel {
+	.module-head {
+		background: rgb(46, 109, 138);
+		width: 100%;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		padding: 20px 30px 50px 30px;
+		box-sizing: border-box;
+		line-height: 1;
+		h1 {
+			display: inline-block;
+			padding: 0;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			letter-spacing: 1.2px;
+			line-height: 1;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.module-filter {
+			display: inline-block;
+			color: rgb(68, 70, 81);
+			font-weight: 300;
+		}
+	}
+	.posts-carousel-module {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		background: rgb(255, 255, 255);
+		border-radius: 3px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+		box-sizing: border-box;
+		margin: 0 0 24px;
+		padding-bottom: 15px;
+		overflow: hidden;
+	}
+	.posts-slider-module-items {
+		width: 100%;
+	}
+
+	.skill-warpper {
+		/* padding: 0 !important; */
+		background-color: rgb(0, 0, 0);
+		padding: 20px 30px;
+		overflow: hidden;
+
+		.module-head {
+			background: rgb(0, 0, 0);
+			width: 100%;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			padding: 15px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			line-height: 1;
+			text-align: center;
+			padding: 15px 15px 30px;
+		}
+		.posts-carousel-module,
+		.c-container {
+			background: rgb(0, 0, 0);
+		}
+		.activity-item {
+			border: 1px solid #f5f5f5 !important;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background: #fff;
+		}
+		h1 {
+			font-weight: normal;
+			font-size: 36px;
+			text-transform: none;
+			span {
+				color: #f87900;
+			}
+		}
+		.nxtbtn {
+			right: -15px;
+		}
+		.prevbtn {
+			left: -15px;
+		}
+	}
+
+	.bottom-warpper {
+		margin-top: 20px;
+		.module-head {
+			background: none;
+			border-bottom: none;
+			padding: 15px 30px;
+
+			h2 {
+				font-weight: normal;
+				font-size: 26px;
+				text-transform: none;
+				color: #576276;
+				margin-top: 10px;
+				margin-bottom: 6px;
+				span {
+					color: #f87900;
+				}
+			}
+
+		}
+	 
+		.high-rate-tech {
+			.module-head{
+				padding: 0 10px;
+				text-align: center;
+			}
+			h2{
+				font-weight: normal;
+				font-size: 23px !important;
+				text-transform: none;
+				margin-top:23px; 
+				color: #576276;
+				span {
+					color: #f87900;
+				}
+			}
+		}
+	}
+
+
+	.mt-0{
+		margin-top: 0;
+	}
+}
+
+.alert.alert-primary {
+	color: #fff;
+}
+
+.alert-info {
+	background-color: #505655;
+	border: 5px solid #838685;
+	padding: 20px;
+}
+.centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.message-data {
+	z-index: 10;
+	a {
+		text-decoration: none;
+	}
+
+	display: inline-block;
+	margin: 0px auto;
+	position: fixed;
+	transition: all 0.5s ease-in-out 0s;
+	top: 60px;
+	left: 0px;
+	right: 0px;
+	//left: calc(50% - 300px);
+}
+.dn {
+	display: none;
+}
+
+.db {
+	display: block;
+}

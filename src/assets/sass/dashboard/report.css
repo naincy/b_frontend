@@ -1,0 +1,40 @@
+.data-point-wrapper {
+  padding: 0;
+  margin: 23px 0;
+  border-radius: 4px;
+  height: auto;
+  width: 100%; }
+  .data-point-wrapper .data-point {
+    display: flex;
+    color: #0e0101;
+    font-weight: bold;
+    -webkit-box-shadow: #81a7ba 10px 10px 5px 0px;
+    box-shadow: #81a7ba 10px 10px 5px 0px;
+    margin: 4px 4px 15px;
+    border: 1px solid #99c8de;
+    border-radius: 5px;
+    min-height: 82px; }
+    .data-point-wrapper .data-point .dp-icon-wrapper img {
+      border: 0;
+      height: auto; }
+    .data-point-wrapper .data-point h4 {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0; }
+    .data-point-wrapper .data-point p {
+      font-weight: 300;
+      width: 185px;
+      font-size: 15px;
+      line-height: 20px; }
+
+.platform-wrapper,
+.recommendation-wrapper,
+.wrapper-shadow {
+  box-shadow: 5px 5px 4px 0px #aaa;
+  margin-bottom: 34px;
+  border: 1px solid #aaa;
+  border-radius: 5px; }
+  .platform-wrapper .carousel-listing,
+  .recommendation-wrapper .carousel-listing,
+  .wrapper-shadow .carousel-listing {
+    padding: 0 10px; }

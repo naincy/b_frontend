@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+    environment {
+        // PATH = "/hot/new/bin:$PATH"
+        GLOBAL_VAR = "naincy"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checkout Code'
+                checkout([$class: 'GitSCM', branches: [[name: '*/release-1.0']], 
+                    doGenerateSubmoduleConfigurations: false,
+                    userRemoteConfigs: [[credentialsId: 'gitlab-cred', url: 'https://ngup95@del.tools.publicis.sapient.com/bitbucket/scm/howt/howathon-benchmark-frontend.git']]])
+            }
+            post { 
+                success { 
+                    echo 'Checkout Successful'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                nodejs('node') {
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                nodejs('node') {
+                   sh 'npm run test'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                nodejs('node') {
+                    sh 'npm run build'
+                }
+            }
+        }
+        stage('Deployment') {
+            steps {
+                echo 'Deployment in Progress....'
+                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false,
+                    entries: [[bucket: 'codebrewers', managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: 'build/*', storageClass: 'STANDARD']],
+                    pluginFailureResultConstraint: 'FAILURE', profileName: 's3 access', userMetadata: []
+                
+                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false,
+                    entries: [[bucket: 'codebrewers', managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: 'build/static/', storageClass: 'STANDARD']],
+                    pluginFailureResultConstraint: 'FAILURE', profileName: 's3 access', userMetadata: []
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'Pipeline ran successfully.'
+        }
+        success {
+            echo 'Code has been deployed successfully.'
+            // mail bcc: '', body: 'Hi', cc: '', from: '', replyTo: '', subject: 'Demo Pipeline', to: 'ngupta96@sapient.com, smishra63@sapient.com, vsharma109@sapient.com'
+        }
+    }
+}
