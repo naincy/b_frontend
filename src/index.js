@@ -15,7 +15,7 @@ render(
  * Firebase configuration and Set service worker for invoking user notification.
  */
 var config = {
-	apiKey: 'AIzaSyCOd4BVz3KTuU3yjnQhT_MK8Bu00VN8X-s',
+	apiKey: 'key', // 'AIzaSyCOd4BVz3KTuU3yjnQhT_MK8Bu00VN8X-s', 
 	authDomain: 'demo2-b245b.firebaseapp.com',
 	databaseURL: 'https://demo2-b245b.firebaseio.com',
 	projectId: 'demo2-b245b',
